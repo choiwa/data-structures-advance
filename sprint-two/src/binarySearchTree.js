@@ -12,12 +12,12 @@ var treeMethods = {};
 treeMethods.insert = function (value) {
   var direction = this.value < value ? 'right' : 'left';
 
-  if(this[direction] === undefined) {
+  if (this[direction] === undefined) {
     this[direction] = BinarySearchTree(value);
   } else {
     this[direction].insert(value);
   }
-}
+};
 
 treeMethods.contains = function (target) {
   var direction = '';
@@ -33,7 +33,7 @@ treeMethods.contains = function (target) {
   } else {
     return this[direction].contains(target);
   }
-}
+};
 
 treeMethods.depthFirstLog = function (cb) {
   cb(this.value);
@@ -45,7 +45,7 @@ treeMethods.depthFirstLog = function (cb) {
   if (this.right !== undefined) {
     this.right.depthFirstLog(cb);
   }
-}
+};
 
 
 
