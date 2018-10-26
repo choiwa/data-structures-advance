@@ -48,7 +48,9 @@ treeMethods.depthFirstLog = function (cb) {
 };
 
 
-
+treeMethods.inOrderTraversal = function (cb) {
+  
+};
 
 /*
  * Complexity: What is the time complexity of the above functions?
