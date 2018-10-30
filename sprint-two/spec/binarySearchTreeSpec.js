@@ -47,7 +47,7 @@ describe('binarySearchTree', function() {
     binarySearchTree.insert(7);
     binarySearchTree.insert(8);
     console.log("im the answer", binarySearchTree);
-    binarySearchTree.inOrderTraversal();
-    expect(binarySearchTree.inOrderTraversal).to.equal([2, 3, 5, 5, 7, 8]);
+    array = binarySearchTree.inOrderTraversal();
+    expect(array).to.eql([2, 3, 5, 5, 7, 8]);
   });
 });
