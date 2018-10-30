@@ -48,8 +48,25 @@ treeMethods.depthFirstLog = function (cb) {
 };
 
 
-treeMethods.inOrderTraversal = function (cb) {
-  
+treeMethods.inOrderTraversal = function () {
+  let array = [];
+  let node = this;
+
+  let recursion = (node) => {
+    if (node.left) {
+      recursion(node.left);
+    }
+    array.push(node.value);
+
+    if (node.right) {
+      recursion(node.right);
+    }
+  };
+
+  recursion(this);
+  console.log(array);
+
+  return array;
 };
 
 /*
