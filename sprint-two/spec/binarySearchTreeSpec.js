@@ -38,16 +38,16 @@ describe('binarySearchTree', function() {
     expect(array).to.eql([5, 2, 3, 7]);
   });
 
-  it('should execute a callback on every value in a tree in "ascending order"', function() {
+  it('should print on every value in a tree in "ascending order"', function() {
     var array = [];
-    var func = function(value) { array.push(value); };
 
     binarySearchTree.insert(2);
     binarySearchTree.insert(3);
     binarySearchTree.insert(5);
     binarySearchTree.insert(7);
     binarySearchTree.insert(8);
-    binarySearchTree.inOrderTraversal(func);
-    expect(array).to.eql([2, 3, 5, 5, 7, 8]);
+    console.log("im the answer", binarySearchTree);
+    binarySearchTree.inOrderTraversal();
+    expect(binarySearchTree.inOrderTraversal).to.equal([2, 3, 5, 5, 7, 8]);
   });
 });
